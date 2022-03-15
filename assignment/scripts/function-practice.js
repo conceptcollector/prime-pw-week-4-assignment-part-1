@@ -21,15 +21,18 @@ function helloName(name) {
 console.log('Hello', helloName('Matt'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+function addNumbers(firstNumber, secondNumber ) {
+  return firstNumber + secondNumber;
 }
+console.log(`${addNumbers(46, 2)} are just ahead of me.`); //A Tool reference
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber){
+  return firstNumber * secondNumber * thirdNumber;
 }
+console.log('Query: How many roads must a man walk down?');
+console.log('Answer:', multiplyThree(2, 3, 7));
 
 
 // 5. Function that will return true if a number is positive, 
