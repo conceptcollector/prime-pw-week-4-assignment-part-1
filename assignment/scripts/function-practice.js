@@ -50,23 +50,39 @@ function isPositive( number ) {
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-console.log();
-console.log();
-console.log();
+console.log('Second test, 46 is positive:', isPositive(46));
+console.log("Inititally thought 0 was positive since it's not negative:", isPositive(0));
+console.log('And a gimme question. -9 is positive:', isPositive(-9));
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( [array] ) {
-
+let array = []
+function getLast() {
+  if (array.length > 0){
+    return array[array.length - 1];
+  }
+  else {
+    return undefined;
+  }
 }
+console.log('When returning an empty array, that return would be', getLast());
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let lookingFor = ['Alaska', 'Mr. Goodbar', 'ward'];
 function find( value, array ){
-  
+  found = false;
+  for (i = 0; i < array.length; i++){
+    if (value === array[i]){
+      found = true;
+      return found;
+    }
 }
+}
+console.log('Hold onto your butts:', find('ward', lookingFor));
+
 
 // ----------------------
 // Stretch Goals
