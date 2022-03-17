@@ -81,6 +81,7 @@ function find( value, array ){
     }
 }
 }
+//This took me a distressingly long time to figure out, so please excuse the Sam Jackson reference.
 console.log('Hold onto your butts:', find('ward', lookingFor));
 
 
