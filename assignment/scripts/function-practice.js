@@ -82,6 +82,7 @@ function find( value, array ){
 }
 }
 //This took me a distressingly long time to figure out, so please excuse the Sam Jackson reference.
+//This shall be the last time that Chris doesn't use the half hour rule discussed by alumni!
 console.log('Hold onto your butts:', find('ward', lookingFor));
 
 
@@ -91,8 +92,12 @@ console.log('Hold onto your butts:', find('ward', lookingFor));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
-}
+    if (letter === string.charAt(0)){
+    return true;
+  } else {
+    return false;
+  }
+  }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
