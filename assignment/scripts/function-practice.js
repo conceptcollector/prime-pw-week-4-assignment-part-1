@@ -142,14 +142,18 @@ console.log('Double checking:', negArray.filter(newArray));
 
 function createPhoneNumber(numbers) {
   let numberGroup = '';
-  const oneToZero = '1234567890';
-  numbersLength = oneToZero.length;
+  // const oneToZero = '1234567890';
+  // numbersLength = oneToZero.length;
   for (let i = 0; i < numbers; i++) {
-    numberGroup += oneToZero.charAt(Math.Random) * numbersLength;
-  }
+  // while (numberGroup.length < numbers) {  
+  // numberGroup += /*oneToZero.charAt(*/Math.floor(Math.random);
+  numberGroup += parseInt(Math.random() * 10);
+}
+  // }
   return numberGroup;
 }
   
   console.log(`[Automated voice]: Your new telephone number is (${createPhoneNumber(3)}) ${createPhoneNumber(3)}-${createPhoneNumber(4)}.`);
 
-  //Okay, I'm leaving this one here and I'm beginning to doubt I can return to it. I have a couple different ideas of what's not working, but... blecch. Onward and upward!
+  //I spent WAY too long on this, but I think I got it!
+  //Kept in some of my work, commented out, to show some of what I tried before.
