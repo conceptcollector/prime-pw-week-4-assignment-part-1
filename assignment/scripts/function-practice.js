@@ -102,18 +102,54 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+let numArray = [1, 2, 3, 4];
+function sumAll(array) {
   let sum = 0
   // TODO: loop to add items
+  for (i = 0; i < array.length; i++){
+    sum += array[i];
+  }
   return sum;
 }
+
+console.log('The first four numbers added together equal', sumAll(numArray));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+numArray.push(0, -1, -2, -3, -4, -5);
+let negArray = [0, -1, -2, -3, -4, -5];
 
+function newArray(value) {
+  return value > 0;
+}
 
+console.log('Filtering out the non-positive numbers in numArray:', numArray.filter(newArray));
+console.log('Double checking:', negArray.filter(newArray));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+//Signed up for codewars just now and pulled the challenge "Create Phone Number".
+//The example given is createPhoneNumber(numbers).
+//This is supposed to be in the actual form of a phone number, so (xxx) xxx-xxxx.
+//The trickiest part has been randomizing numbers in a string,
+//but I found a Stack Overflow article that gave me the great idea of focusing on
+//the length of the string rather than randomization.
+//(I completely broke my half hour rule on this one... I just kept thinking I was close!)
+
+
+function createPhoneNumber(numbers) {
+  let numberGroup = '';
+  const oneToZero = '1234567890';
+  numbersLength = oneToZero.length;
+  for (let i = 0; i < numbers; i++) {
+    numberGroup += oneToZero.charAt(Math.Random) * numbersLength;
+  }
+  return numberGroup;
+}
+  
+  console.log(`[Automated voice]: Your new telephone number is (${createPhoneNumber(3)}) ${createPhoneNumber(3)}-${createPhoneNumber(4)}.`);
+
+  //Okay, I'm leaving this one here and I'm beginning to doubt I can return to it. I have a couple different ideas of what's not working, but... blecch. Onward and upward!
