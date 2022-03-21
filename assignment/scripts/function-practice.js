@@ -57,8 +57,8 @@ console.log('And a gimme question. -9 is positive:', isPositive(-9));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let array = ['stuff']
-function getLast() {
+let firstArray = ['stuff']
+function getLast(array) {
   if (array.length > 0){
     return array[array.length - 1];
   }
@@ -66,20 +66,22 @@ function getLast() {
     return undefined;
   }
 }
-console.log('Gimme that', getLast());
+console.log('Gimme that', getLast(firstArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let lookingFor = ['Alaska', 'Mr. Goodbar', 'ward'];
 function find( value, array ){
-  let found = false;
+  let found;
   for (i = 0; i < array.length; i++){
     if (value === array[i]){
       found = true;
-      return found;
+    } else if (value != array[i]) {
+      found = false;
     }
 }
+  return found;
 }
 //This took me a distressingly long time to figure out, so please excuse the Sam Jackson reference.
 //This shall be the last time that Chris doesn't use the half hour rule discussed by alumni!
@@ -151,8 +153,20 @@ function createPhoneNumber(numbers) {
 }
   return numberGroup;
 }
+
+function doTheThing() {
+  return `(${createPhoneNumber(3)}) ${createPhoneNumber(3)}-${createPhoneNumber(4)}`;
+}
   
-  console.log(`[Automated voice]: Your new telephone number is (${createPhoneNumber(3)}) ${createPhoneNumber(3)}-${createPhoneNumber(4)}.`);
+console.log('[Automated voice]: Your new telephone number is', doTheThing());
 
   //I spent WAY too long on this, but I think I got it!
   //Kept in some of my work, commented out, to show some of what I tried before.
+
+let someOtherArray = ['dog', 'cat', 'bear'];
+let emptyArray = [];
+
+console.log('expect bear ==>', getLast(someOtherArray));
+console.log('expect undefined ==>', getLast(emptyArray));
+
+console.log('expect false ==>', find('blammo!', lookingFor));
