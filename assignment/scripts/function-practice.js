@@ -57,7 +57,7 @@ console.log('And a gimme question. -9 is positive:', isPositive(-9));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let array = []
+let array = ['stuff']
 function getLast() {
   if (array.length > 0){
     return array[array.length - 1];
@@ -66,14 +66,14 @@ function getLast() {
     return undefined;
   }
 }
-console.log('When returning an empty array, that return would be', getLast());
+console.log('Gimme that', getLast());
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let lookingFor = ['Alaska', 'Mr. Goodbar', 'ward'];
 function find( value, array ){
-  found = false;
+  let found = false;
   for (i = 0; i < array.length; i++){
     if (value === array[i]){
       found = true;
@@ -149,7 +149,6 @@ function createPhoneNumber(numbers) {
   // numberGroup += /*oneToZero.charAt(*/Math.floor(Math.random);
   numberGroup += parseInt(Math.random() * 10);
 }
-  // }
   return numberGroup;
 }
   
