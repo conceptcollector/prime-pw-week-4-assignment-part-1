@@ -73,14 +73,12 @@ console.log('Gimme that', getLast(firstArray));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let lookingFor = ['Alaska', 'Mr. Goodbar', 'ward'];
 function find( value, array ){
-  let found;
-  for (i = 0; i < array.length; i++){
+  let found = false;
+  for (let i = 0; i < array.length; i++){
     if (value === array[i]){
       found = true;
-    } else if (value != array[i]) {
-      found = false;
     }
-}
+    }
   return found;
 }
 //This took me a distressingly long time to figure out, so please excuse the Sam Jackson reference.
